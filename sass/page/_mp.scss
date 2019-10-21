@@ -1,0 +1,607 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// 範例：
+.demosection {
+    [class^="col"] {
+        border: 2px solid #FFF;
+        background: #DEDEDE;
+    }
+}
+// 首頁輪播
+.mpSlider {
+    width: 100%;
+    padding-bottom: 3em;
+    @include gutter(0);
+    .img-container {
+        @include aspect-ratio(5, 2);
+    }
+}
+// 廣告輪播
+.adSlider {
+    @include gutter(70px);
+    margin-bottom: 20px;
+    @include screen('mobile') {
+        @include gutter();
+    }
+    .slick-prev {
+        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+        background-size: 80%;
+        left: -15px;
+    }
+    .slick-next {
+        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+        background-size: 80%;
+        right: -15px;
+    }
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+        a {
+            display: block;
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+        }
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            }
+        }
+    }
+}
+// 期刊簡介
+.periodical_block {
+    position: relative;
+    height: 599px;
+    @include screen('mobile') {
+        height: 350px;
+    }
+    @media(max-width: 480px) {
+        height: auto;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-image: url('../images/headerbg_mp.jpg');
+        background-position: center 0px;
+        background-repeat: no-repeat;
+        height: 599px;
+        z-index: 0;
+        @include screen('mobile') {
+            height: 350px;
+        }
+        @media(max-width: 480px) {
+            height: 100%;
+        }
+    }
+    &:after {
+        content: '';
+        background-image: url('../images/periodical_word.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        z-index: 1;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 105px;
+        height: 530px;
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+}
+.periodical {
+    width: 650px;
+    padding: 140px 20px 20px;
+    position: relative;
+    clear: both;
+    @include box-sizing;
+    @include screen('tablet') {
+        width: 90%;
+    }
+    @include screen('mobile') {
+        padding: 30px 20px 30px;
+        width: 100%;
+    }
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+        margin-bottom: 15px;
+        font-size: 1.188em;
+        a {
+            display: inline-block;
+            color: $color-word;
+            span {
+                display: block;
+                font-size: 2.3em;
+                margin-top: 25px;
+                line-height: 1.3em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+    >.content {
+        position: relative;
+        z-index: 12;
+        width: 580px;
+        margin: 0 auto;
+        @include screen('tablet') {
+            width: 90%;
+        }
+        @include screen('mobile') {
+            width: 100%;
+        }
+    }
+    &:after {
+        content: '';
+        width: 780px;
+        background-color: rgba(255, 255, 255, .9);
+        z-index: 9;
+        position: absolute;
+        height: 599px;
+        top: 0;
+        left: -50px;
+        transform: skewX(-20deg);
+        @include screen('tablet') {
+            width: 100%;
+            left: -90px;
+        }
+        @include screen('mobile') {
+            height: 350px;
+        }
+        @media(max-width: 480px) {
+            height: 100%;
+            left: 0px;
+            transform: skewX(0deg);
+            background-color: rgba(255, 255, 255, .8);
+        }
+    }
+    figure {
+        float: right;
+        margin: 5px 0 0 30px;
+        img {
+            width: 183px;
+        }
+        @media(max-width: 480px) {
+            float: none;
+            width: 183px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .dataword {
+        display: block;
+        p {
+            line-height: 2em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+        .login_btn {
+            a {
+                background-color: #fff;
+                border: 1px solid #000;
+                display: block;
+                padding: 22px 45px;
+                width: 230px;
+                margin-left: 0px;
+                text-align: center;
+                @include box-sizing;
+                font-size: 1.25em;
+                color: $color-word;
+                transform: perspective(1px) translateZ(0);
+                transition-duration: 0.3s;
+                @media(max-width: 640px) {
+                    padding: 22px 5px;
+                }
+                @media(max-width: 480px) {
+                    margin: 20px auto 0;
+                }
+                &:hover {
+                    background-color: #666;
+                    color: #fff;
+                    border: 1px solid #666;
+                }
+            }
+        }
+    }
+}
+// 最新消息內容
+.news_block {
+    @include gradient($primaryColor, $secondaryColor, horizontal);
+    padding: 50px 0;
+    min-height: 260px;
+    margin-bottom: 20px;
+    @include box-sizing;
+    @include screen('notebook') {
+        padding: 50px 15px;
+        // min-height: inherit;
+    }
+    @include screen('mobile'){
+        padding: 30px 15px;
+    }
+    .news {
+        position: relative;
+        h2 {
+            color: #fff;
+            font-size: 2.18em;
+            font-weight: 300;
+            writing-mode: vertical-lr;
+            margin-right: 60px;
+            padding-top: 20px;
+            position: absolute;
+            height: 200px;
+            width: 100px;
+            @include screen('mobile') {
+                writing-mode: horizontal-tb;
+                width: auto;
+                height: auto;
+                margin-right: auto;
+                margin-left: 40px;
+                position: relative;
+                padding-top: 0px;
+            }
+            &:before {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #fff;
+                top: -20px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    left: -15px;
+                }
+            }
+            &:after {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #fff;
+                top: -20px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    left: -15px;
+                }
+            }
+        }
+        ul {
+            margin: 0 0 25px 160px;
+            padding: 0;
+            width: 75%;
+            @include box-sizing;
+            @include screen('mobile') {
+                width: auto;
+                margin: 0 0 25px 0;
+            }
+            li {
+                color: #fff;
+                border-bottom: 1px solid rgba(255, 255, 255, .5);
+                list-style: none;
+                a {
+                    display: block;
+                    padding: 15px;
+                    color: #fff;
+                    @include text-overflow;
+                    &:hover {
+                        color: $color-yellow;
+                    }
+                }
+            }
+        }
+        .more {
+            clear: both;
+            float: right;
+            a {
+                background-image: url('../images/icon_more_white.png');
+                background-position: right center;
+                background-repeat: no-repeat;
+                color: #fff;
+                padding-right: 90px;
+                font-size: .813em;
+                letter-spacing: .1em;
+                transition: .5s;
+                &:hover {
+                    padding-right: 70px;
+                }
+            }
+        }
+    }
+}
+// 最新卷期
+.volume_block {
+    padding: 30px 0px;
+    @include screen('notebook') {
+        padding: 30px 15px;
+    }
+    .volume {
+        text-align: center;
+        h2 {
+            display: inline-block;
+            position: relative;
+            color: #000;
+            font-size: 2.18em;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 5px;
+            &:before {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #000;
+                top: -20px;
+                left: -10px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    left: -15px;
+                }
+            }
+            &:after {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #000;
+                top: -20px;
+                left: -10px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    left: -15px;
+                }
+            }
+        }
+        .periods_unmber {
+            display: block;
+            color: #000;
+            font-size: 1.25em;
+            font-weight: 300;
+            margin-bottom: 55px;
+        }
+        // 卷期資料
+        .volume_content {
+            clear: both;
+            margin-bottom: 30px;
+            .datablock {
+                width: 31%;
+                display: inline-block;
+                padding: 20px 1.16% 0;
+                text-align: left;
+                vertical-align: top;
+                @include box-sizing;
+                &:nth-child(even) {
+                    padding-top: 60px;
+                }
+                @include screen('mobile') {
+                    width: 80%;
+                    margin-bottom: 30px;
+                    &:nth-child(even) {
+                        padding-top: 20px;
+                    }
+                }
+                a {
+                    display: block;
+                    color: #333;
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+                .data_content {
+                    position: relative;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 20px #ddd;
+                    padding: 190px 30px 20px 60px;
+                    height: 350px;
+                    @include box-sizing;
+                    @include screen('mobile') {
+                        padding-left: 21%;
+                    }
+                }
+                .no {
+                    position: absolute;
+                    writing-mode: vertical-rl;
+                    left: 5px;
+                    top: 120px;
+                    font-size: 1.125em;
+                    color: #bfbfbf;
+                    &:before {
+                        content: '';
+                        width: 1px;
+                        height: 90px;
+                        background-color: #bfbfbf;
+                        position: absolute;
+                        top: -100px;
+                        left: 12px;
+                    }
+                }
+                .ch {
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                    width: 88%;
+                    height: 190px;
+                    background-color: #4eb1af;
+                    padding: 20px;
+                    color: #fff;
+                    @include screen('tablet') {
+                        width: 85%;
+                    }
+                    @include box-sizing;
+                    span {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+                &:nth-child(1) {
+                    .ch {
+                        background-image: url('../images/volume_bg01.jpg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                &:nth-child(2) {
+                    .ch {
+                        background-image: url('../images/volume_bg02.jpg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                &:nth-child(3) {
+                    .ch {
+                        background-image: url('../images/volume_bg03.jpg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                .en {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+        // 
+        .more {
+            clear: both;
+            float: right;
+            a {
+                background-image: url('../images/icon_more_black.png');
+                background-position: right center;
+                background-repeat: no-repeat;
+                color: #000;
+                padding-right: 90px;
+                font-size: .813em;
+                letter-spacing: .1em;
+                transition: .5s;
+                &:hover {
+                    padding-right: 70px;
+                }
+            }
+        }
+    }
+}
+// 相關連結
+.related_links_block {
+    padding: 0px 0px 70px;
+    // background-image: url('../images/related_links_bg.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center top;
+    @include screen('notebook') {
+        padding: 0px 15px 30px;
+    }
+    .related_links {
+        text-align: center;
+        h2 {
+            display: inline-block;
+            position: relative;
+            color: #000;
+            font-size: 2.18em;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 50px;
+            &:before {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #000;
+                top: -20px;
+                left: -10px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    left: -15px;
+                }
+            }
+            &:after {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #000;
+                top: -20px;
+                left: -10px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    left: -15px;
+                }
+            }
+        }
+        .links_Slider {
+            // margin-right: 20px;
+            padding: 0 30px;
+            div {
+                text-align: center;
+                padding: 0 0px;
+                line-height: 200px;
+                margin: 0 10px 0 4px;
+                a {
+                    display: block;
+                    height: 100px;
+                    line-height: 20px;
+                    vertical-align: middle;
+                    text-align: center;
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    @include box-sizing;
+                    padding: 30px 40px;
+                    color: #000;
+                    transition: .5s;
+                    &:hover {
+                        background-color: #ccc;
+                    }
+                }
+            }
+            .slick-prev {
+                width: 48px !important;
+                height: 40px !important;
+                background-image: url('../vendor/slick/icon_arrow_left_Slider.png');
+                background-size: 48px;
+                background-color: transparent;
+                transition: .5s;
+                &:hover, &:focus {
+                    left: 18px;
+                }
+            }
+            .slick-next {
+                width: 48px !important;
+                height: 40px !important;
+                background-image: url('../vendor/slick/icon_arrow_right_Slider.png');
+                background-size: 48px;
+                background-color: transparent;
+                transition: .5s;
+                &:hover, &:focus {
+                    right: 18px;
+                }
+            }
+        }
+    }
+}

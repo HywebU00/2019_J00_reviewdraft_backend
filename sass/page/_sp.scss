@@ -1,0 +1,169 @@
+@charset "utf-8";
+.sp {
+    h3 {
+        color: $primaryColor;
+        font-size: 1.562em;
+    }
+}
+// 會員登入區塊
+.member_block {
+    width: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 30px 50px;
+    box-shadow: 0 0 5px #ccc;
+    @include screen('tablet'){
+        width: 70%;
+    }
+    @include screen('mobile'){
+         width: 80%;
+          padding: 30px ;
+    }
+    @include screen('xs_mobile'){
+        width: 100%;
+        padding: 30px 10px;
+    }
+    .btn {
+        padding: 1em 8em;
+        background: none;
+        background-color: $primaryColor;
+        border-radius: 0;
+        @include screen('mobile'){
+            padding: 1em 5em;
+            width: 100%;
+        }
+    }
+}
+// 忘記密碼
+.forget_password {
+    display: inline-block;
+    padding: 5px 25px 5px 0;
+    position: relative;
+    &:before {
+        content: '';
+        background-image: url('../images/icon_forget.png');
+        background-repeat: no-repeat;
+        background-position: 0;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: 0;
+        top: 8px;
+    }
+}
+// 驗證區塊
+.verification {
+    // background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+// 申請步驟
+.step_block {
+    margin-bottom: 40px;
+    ul {
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            background-color: $thirdColor;
+            color: #fff;
+            padding: 20px 30px;
+            margin-right: 80px;
+            font-size: 1.125em;
+            position: relative;
+            &.active {
+                background-color: $primaryColor;
+                color: #fff;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 28px;
+                height: 32px;
+                left: -55px;
+                top: 20px;
+                background-image: url('../images/icon_step.png');
+                background-repeat: no-repeat;
+                background-position: left center;
+            }
+            &:first-child {
+                &:before {
+                    background-image: none;
+                }
+            }
+        }
+    }
+}
+// 會員條款
+.member_termsy {
+    .content {
+        padding: 30px 50px;
+        background-color: #fff;
+        box-shadow: 0 0 5px #ccc;
+        margin-bottom: 20px;
+    }
+    p {
+        margin: 1em 0;
+        line-height: 1.7em;
+    }
+    .check_grp {
+        padding-top: 30px;
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        padding-left: 40px;
+        input[type="checkbox"] {
+            width: 1.5em;
+            height: 1.5em;
+            margin-left: -40px;
+            margin-right: 15px;
+        }
+    }
+    ol {
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    h4 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+    h5 {
+        font-size: 1em;
+        padding: 10px 20px;
+        background-color: #eee;
+        font-weight: normal;
+    }
+}
+// 基本資料
+.basic_information{
+	.content{
+        background-color: #f8f8f8;
+        padding: 30px 50px;
+    }
+}
+// 步驟按鈕
+.stepbtn {
+    @include gradient($primaryColor, $secondaryColor, horizontal);
+    color: #fff;
+    border-radius: 0;
+    padding: 1em 5em;
+    border: none;
+    position: relative;
+    &:hover {
+        border: none !important;
+        @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
+         color: #fff;
+    }
+    &:before {
+        content: '';
+        border: 3px solid #fff;
+        border-color: #fff #fff transparent transparent;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        right: 20px;
+        top: 22px;
+        transform: rotate(45deg);
+    }
+}
