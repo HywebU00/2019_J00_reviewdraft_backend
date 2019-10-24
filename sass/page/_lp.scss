@@ -220,6 +220,13 @@
             border: none !important;
         }
     }
+    
+    @include screen('xs_mobile'){
+        tr{
+           padding:0 8px 10px;
+           border-radius: .2em;
+        }
+     }
 }
 // 表格查詢
 .searchkeyword {

@@ -294,6 +294,9 @@
     padding: 1em 5em;
     border: none;
     position: relative;
+    @media(max-width: 500px){
+        width: 210px;
+    }
     &:hover {
         border: none !important;
         @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
@@ -319,6 +322,9 @@
     padding: 1em 5em;
     border: none;
     position: relative;
+    @media(max-width: 500px){
+        width: 210px;
+    }
     &:hover {
         border: none !important;
         @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
@@ -344,6 +350,9 @@
     padding: 1em 5em;
     border: none;
     position: relative;
+    @media(max-width: 500px){
+        width: 210px;
+    }
     &:hover {
         border: none !important;
         @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
