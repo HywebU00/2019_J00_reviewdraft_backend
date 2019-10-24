@@ -116,38 +116,107 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li>會員登入</li>
+                        <li><a href="#">基本設定</a></li>
+                        <li>刊物設定</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">會員登入</h2>
+                <h2 class="title">刊物設定</h2>
                 <!--SP Start -->
                 <section class="sp">
-                    <!-- 會員登入 start -->
-                    <div class="member_block">
-                        <form action="" class="form_grid">
-                            <div class="form_grp">
-                                <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>會員帳號</label>
-                                <div class="form_content">
-                                    <input name="username" type="text" placeholder="請輸入文字">
-                                </div>
-                            </div>
-                            <div class="form_grp">
-                                <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>會員密碼</label>
-                                <div class="form_content">
-                                    <input name="password" type="password" placeholder="請輸入密碼">
-                                    <div class="forget_password"><a class="" href="#">忘記密碼</a></div>
-                                </div>
-                            </div>
-                            <div class="verification">
-                                <p>請帶顯示綠色勾勾後再點選「會員登入」</p>
-                            </div>
-                            <div class="btn_grp">
-                                <button class="btn btn-submit">會員登入</button>
-                            </div>
-                        </form>
+                    <!-- 申請步驟start -->
+                    <div class="step_block">
+                        <ul>
+                            <li>期刊基本資料</li>
+                            <li>連絡資訊</li>
+                            <li class="active">相關檔案</li>
+                        </ul>
                     </div>
-                    <!-- 會員登入 end -->
+                    <!-- 申請步驟end -->
+                    <form action="" class="form_grid">
+                        <!-- 填寫基本資料 start -->
+                        <div class="basic_information">
+                            <div class="content">
+                                <div class="form_grp">
+                                    <label for="" class="form_title">期刊封面圖</label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">徵稿辦法<span class="thsec_explain">(檔案格式：.pdf)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">審稿辦法<span class="thsec_explain">(檔案格式：.pdf)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">審查意見表<span class="thsec_explain">(檔案格式：.pdf)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">其他表單<span class="thsec_explain">(檔案格式：.pdf)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">其他表單<span class="thsec_explain">(檔案格式：.pdf)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 填寫基本資料 end -->
+                        <div class="btn_grp">
+                            <button class="btn stepbtn_submit" type="submit">儲存</button>
+                            <button class="btn stepbtn_reset" type="reset">取消</button>
+                        </div>
+                    </form>
                 </section>
                 <!-- SP End -->
             </div>

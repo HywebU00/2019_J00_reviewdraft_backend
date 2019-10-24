@@ -3,6 +3,7 @@
     h3 {
         color: $primaryColor;
         font-size: 1.562em;
+        clear: both;
     }
 }
 // 會員登入區塊
@@ -12,14 +13,14 @@
     margin: 0 auto;
     padding: 30px 50px;
     box-shadow: 0 0 5px #ccc;
-    @include screen('tablet'){
+    @include screen('tablet') {
         width: 70%;
     }
-    @include screen('mobile'){
-         width: 80%;
-          padding: 30px ;
+    @include screen('mobile') {
+        width: 80%;
+        padding: 30px;
     }
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         width: 100%;
         padding: 30px 10px;
     }
@@ -28,9 +29,23 @@
         background: none;
         background-color: $primaryColor;
         border-radius: 0;
-        @include screen('mobile'){
+        @include screen('mobile') {
             padding: 1em 5em;
             width: 100%;
+        }
+    }
+    .form_grid {
+        .form_title {
+            width: 130px !important;
+            @include screen('mobile') {
+                width: 100% !important;
+            }
+        }
+        .form_content {
+            width: calc(100% - 130px) !important;
+            @include screen('mobile') {
+                width: 100% !important;
+            }
         }
     }
 }
@@ -61,33 +76,59 @@
 // 申請步驟
 .step_block {
     margin-bottom: 40px;
+    clear: both;
     ul {
         list-style: none;
-        text-align: center;
+        text-align: left;
+        margin: 0;
+        padding: 0;
         li {
             display: inline-block;
             background-color: $thirdColor;
             color: #fff;
             padding: 20px 30px;
             margin-right: 80px;
+            margin-bottom: 20px;
             font-size: 1.125em;
             position: relative;
+            @include screen('tablet') {
+                padding: 20px;
+                margin-right: 50px;
+            }
+            @include screen('xs_mobile') {
+                margin-right: 0px;
+                margin-bottom: 50px;
+                display: block;
+                padding: 15px 20px;
+            }
             &.active {
                 background-color: $primaryColor;
                 color: #fff;
+            }
+            &:last-child {
+                margin-right: 0px;
             }
             &:before {
                 content: '';
                 position: absolute;
                 width: 28px;
                 height: 32px;
-                left: -55px;
+                right: -55px;
                 top: 20px;
                 background-image: url('../images/icon_step.png');
                 background-repeat: no-repeat;
                 background-position: left center;
+                @include screen('tablet') {
+                    right: -40px;
+                }
+                @include screen('xs_mobile') {
+                    transform: rotate(90deg);
+                    right: 45%;
+                    top: auto;
+                    bottom: -40px;
+                }
             }
-            &:first-child {
+            &:last-child {
                 &:before {
                     background-image: none;
                 }
@@ -102,6 +143,9 @@
         background-color: #fff;
         box-shadow: 0 0 5px #ccc;
         margin-bottom: 20px;
+        @include screen('mobile') {
+            padding: 30px;
+        }
     }
     p {
         margin: 1em 0;
@@ -127,6 +171,8 @@
     h4 {
         font-size: 1.5em;
         margin: 0;
+        line-height: 1.4em;
+        padding: 0;
     }
     h5 {
         font-size: 1em;
@@ -136,14 +182,112 @@
     }
 }
 // 基本資料
-.basic_information{
-	.content{
+.basic_information {
+    .content {
         background-color: #f8f8f8;
         padding: 30px 50px;
+        @include screen('mobile') {
+            padding: 30px;
+        }
+        @include screen('xs_mobile') {
+            padding: 10px 10px;
+        }
     }
 }
-// 步驟按鈕
-.stepbtn {
+// 註冊完成
+.registeredok {
+    background-color: #eee;
+    padding: 30px 50px;
+    @include screen('mobile') {
+        padding: 30px;
+    }
+    .sendword {
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 1.3em;
+        word-break: break-all;
+    }
+    .contact {
+        padding: 20px;
+        background-color: #fff;
+        font-size: 1.125em;
+        font-weight: 500;
+        position: relative;
+        @include screen('mobile') {
+            padding: 10px 0;
+        }
+        &:after {
+            content: '';
+            width: 1px;
+            height: 60px;
+            transform: skew(45deg);
+            position: absolute;
+            background-color: #000;
+            bottom: -10px;
+            right: 40px;
+            @include screen('mobile') {
+                bottom: -40px;
+                right: 10px;
+            }
+        }
+        // &:before {
+        //     content: '';
+        //     width: 1px;
+        //     height: 60px;
+        //     transform: skew(45deg);
+        //     position: absolute;
+        //     background-color: #000;
+        //     bottom: -10px;
+        //     right: 40px;
+        //     @include screen('mobile'){
+        //         bottom: -40px;
+        //         right: 10px;
+        //     }
+        // }
+        ul {
+            list-style: none;
+            position: relative;
+            margin-left: 50px;
+            padding: 0 30px;
+            @include screen('mobile') {
+                margin-left: 0;
+                padding: 0 20px;
+            }
+            &:before {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #000;
+                top: -20px;
+                left: 0px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+            &:after {
+                content: '';
+                width: 1px;
+                height: 50px;
+                position: absolute;
+                background-color: #000;
+                top: -20px;
+                left: 0px;
+                transform: skew(-45deg);
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+            li {
+                margin-bottom: 10px;
+                word-break: break-all;
+            }
+        }
+    }
+}
+// 下一步 步驟按鈕
+.stepbtn_next {
     @include gradient($primaryColor, $secondaryColor, horizontal);
     color: #fff;
     border-radius: 0;
@@ -153,7 +297,7 @@
     &:hover {
         border: none !important;
         @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
-         color: #fff;
+        color: #fff;
     }
     &:before {
         content: '';
@@ -165,5 +309,270 @@
         right: 20px;
         top: 22px;
         transform: rotate(45deg);
+    }
+}
+// 上一步 步驟按鈕
+.stepbtn_prev {
+    @include gradient($primaryColor, $secondaryColor, horizontal);
+    color: #fff;
+    border-radius: 0;
+    padding: 1em 5em;
+    border: none;
+    position: relative;
+    &:hover {
+        border: none !important;
+        @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
+        color: #fff;
+    }
+    &:before {
+        content: '';
+        border: 3px solid #fff;
+        border-color: #fff #fff transparent transparent;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 20px;
+        top: 22px;
+        transform: rotate(-135deg);
+    }
+}
+// submit reset
+.stepbtn_submit, .stepbtn_reset {
+    @include gradient($primaryColor, $secondaryColor, horizontal);
+    color: #fff;
+    border-radius: 0;
+    padding: 1em 5em;
+    border: none;
+    position: relative;
+    &:hover {
+        border: none !important;
+        @include gradient(darken($primaryColor, 5), darken($secondaryColor, 5), horizontal);
+        color: #fff;
+    }
+}
+// 關鍵字
+.keyword_block {
+    border: 1px solid #CCC;
+    padding: .4em .3em .2em .3em;
+    background: #fff;
+    border-radius: .2em;
+    .keyword {
+        background-color: #d6f1f0;
+        color: #333;
+        position: relative;
+        padding: 3px 35px 0px 8px;
+        display: inline-block;
+        border-radius: .2em;
+        margin-bottom: 3px;
+        span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 0px;
+            top: 3px;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+//說明區塊
+.explanation_block {
+    padding: 30px 50px;
+    @include screen('mobile') {
+        padding: 30px;
+    }
+    @media(max-width: 480px) {
+        padding: 30px 10px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            &:before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $primaryColor;
+                position: absolute;
+                left: 0;
+                top: 7px;
+            }
+        }
+    }
+}
+//重要說明
+.important_explain {
+    background-color: darken($importantColor, 25);
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+// 建議按鈕
+.suggest_btn {
+    margin-bottom: 10px;
+    text-align: right;
+    button {
+        background: none !important;
+        background-color: #000 !important;
+        color: #fff;
+        border: 1px solid #000;
+        text-shadow: none;
+        padding: .8em 1em !important;
+        &:hover {
+            padding: .8em 1em !important;
+            border: 1px solid #666 !important;
+            background-color: #666 !important;
+            color: #fff;
+        }
+    }
+}
+//仿頁籤
+.like_tab {
+    border-bottom: 3px solid $linkColor;
+    overflow: hidden;
+    margin-bottom: 10px;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            list-style: none;
+            margin-right: 8px;
+            font-size: 1.25em;
+            a {
+                display: block;
+                padding: 1em 2em;
+                background-color: #999;
+                color: #fff;
+            }
+            &.here {
+                a {
+                    background-color: $linkColor;
+                    color: #fff;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        border: 7px solid #fff;
+                        border-color: transparent transparent transparent #fff;
+                        position: absolute;
+                        left: 20px;
+                        top: 23px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 稿件編號主題
+.num_subject {
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    // border:1px solid #ccc;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 10px;
+            font-size: 1.125em;
+            position: relative;
+            padding: 8px 20px 8px 35px;
+            background-color: #eee;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: 7px;
+                height: 7px;
+                background-color: #999;
+                transform: rotate(45deg);
+            }
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+// 儀表板
+.dashboard_block {
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            margin: 0 .5%;
+            width: 19%;
+            list-style: none;
+            @include screen('mobile'){
+                width: 32%;
+                margin: 0 .66% 8px;
+            }
+            @media(max-width: 480px){
+                width: 48%;
+                margin: 0 1% 8px;
+            }
+            @media(max-width: 380px){
+                width: 100%;
+                margin: 0 0 8px;
+            }
+            a {
+                display: block;
+                background-color: #eee;
+                color: #000;
+                text-align: center;
+                height: 170px;
+                padding: 50px 10px 20px;
+                border: 1px solid #dfdfdf;
+                @include gradient(#dfdfdf, #eee, vertical);
+                @include box-sizing;
+                &:hover {
+                    @include gradient(#f5f5f5, #eee, vertical);
+                }
+                span {
+                    display: block;
+                    margin-bottom: 15px;
+                    em {
+                        font-size: 5em;
+                        font-style: normal;
+                    }
+                }
+                &.tobe_processed {
+                    @include gradient(#eebdbd, #f4d4d4, vertical);
+                    &:hover {
+                        @include gradient(#fee1e1, #f4d4d4, vertical);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 預審建議標題
+.pre_trial_title{
+    position: relative;
+    background-color:#000;
+    color:#fff;
+    padding:12px 30px;
+    margin:0 0 30px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    .close{
+        position: absolute;
+        right:10px;
+        top:8px;
+        a{
+            display: block;
+        }
     }
 }

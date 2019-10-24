@@ -116,38 +116,116 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li>會員登入</li>
+                        <li><a href="#">會員申請</a></li>
+                        <li>填寫基本資料</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">會員登入</h2>
+                <h2 class="title">會員申請</h2>
                 <!--SP Start -->
                 <section class="sp">
-                    <!-- 會員登入 start -->
-                    <div class="member_block">
+                    <!-- 申請步驟start -->
+                    <div class="step_block">
+                        <ul>
+                            <li>Step1.同意會員條款</li>
+                            <li class="active">Step2.填寫基本資料</li>
+                            <li>Step3.註冊完成</li>
+                        </ul>
+                    </div>
+                    <!-- 申請步驟end -->
+                    <h3>填寫基本資料</h3>
+                    <!-- 填寫基本資料 start -->
+                    <div class="basic_information">
                         <form action="" class="form_grid">
-                            <div class="form_grp">
-                                <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>會員帳號</label>
-                                <div class="form_content">
-                                    <input name="username" type="text" placeholder="請輸入文字">
+                            <div class="content">
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>帳號(主要mail)</label>
+                                    <div class="form_content hasbtn">
+                                        <input type="text" id="">
+                                        <button type="button">確認帳號是否重複</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form_grp">
-                                <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>會員密碼</label>
-                                <div class="form_content">
-                                    <input name="password" type="password" placeholder="請輸入密碼">
-                                    <div class="forget_password"><a class="" href="#">忘記密碼</a></div>
+                                <div class="form_grp">
+                                    <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>密碼</label>
+                                    <div class="form_content">
+                                        <input name="password" type="password">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="verification">
-                                <p>請帶顯示綠色勾勾後再點選「會員登入」</p>
+                                <div class="form_grp">
+                                    <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>確認密碼</label>
+                                    <div class="form_content">
+                                        <input name="password" type="password">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>中文姓名</label>
+                                    <div class="form_content">
+                                        <input name="" type="text" id="">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>英文姓名（同護照）</label>
+                                    <div class="form_content">
+                                        <input name="" type="text" id="">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>在職（教學）單位</label>
+                                    <div class="form_content">
+                                        <input name="" type="text" id="">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>職稱</label>
+                                    <div class="form_content hasselect">
+                                        <select name="" id="">
+                                            <option value="">請選擇</option>
+                                            <option value="">教授</option>
+                                            <option value="">副教授</option>
+                                            <option value="">助理教授</option>
+                                        </select>
+                                        <input name="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡電話</label>
+                                    <div class="form_content">
+                                        <input name="" type="text" id="">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>行動電話</label>
+                                    <div class="form_content">
+                                        <input name="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>備用Email</label>
+                                    <div class="form_content hasbtn">
+                                        <input name="" type="text"><button type="button">加入</button>
+                                        <textarea name="" id="address" cols="30" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>通訊地址</label>
+                                    <div class="form_content">
+                                        <input name="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">專長領域</label>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="3"></textarea>
+                                    </div>
+                                </div>
                             </div>
                             <div class="btn_grp">
-                                <button class="btn btn-submit">會員登入</button>
+                                <button class="btn stepbtn_prev">上一步</button>
+                                <button class="btn stepbtn_next">下一步</button>
                             </div>
                         </form>
                     </div>
-                    <!-- 會員登入 end -->
+                    <!-- 填寫基本資料 end -->
                 </section>
                 <!-- SP End -->
             </div>

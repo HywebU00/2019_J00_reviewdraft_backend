@@ -16,11 +16,10 @@ body {
 .wrapper {
     width: 100%;
     margin: 0px auto;
-      background-image: url('../images/related_links_bg.jpg');
+    background-image: url('../images/related_links_bg.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
     @include screen('mobile') {
-       
         overflow: hidden;
         overflow-y: auto;
     }
@@ -37,27 +36,25 @@ body {
     margin: 0 auto;
     padding: 0;
     min-height: 700px;
-   
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     @include screen('mobile') {
         padding-top: 55px;
     }
     h2 {
         line-height: 1.25em;
-       
-        &.title{
-             margin:0 0 40px;
+        &.title {
+            margin: 0 0 40px;
             font-size: 1.625em;
             font-weight: 400;
             position: relative;
-            &:before{
-                content:'';
+            &:before {
+                content: '';
                 width: 45px;
                 height: 4px;
-                background-color:lighten($primaryColor, 15);
+                background-color: lighten($primaryColor, 15);
                 position: absolute;
-                bottom:-15px;
-                left:0; 
+                bottom: -15px;
+                left: 0;
             }
         }
     }
@@ -80,11 +77,12 @@ body {
     background-repeat: no-repeat;
     padding-top: 60px;
     height: 185px;
-    margin-bottom:  20px;
+    margin-bottom: 20px;
     @include box-sizing;
-    @include screen('mobile'){
-         padding-top: 90px;
+    @include screen('mobile') {
+        padding-top: 90px;
     }
+    
     >.container {
         @include gutter(); //gutter 代表左右要留白
     }
@@ -113,38 +111,60 @@ body {
             }
         }
         // 
-        .login_btn{
+        .login_btn {
             position: absolute;
-            top:0;
-            right:0px;
-            @include screen('mobile'){
+            top: 0;
+            right: 0px;
+            @include screen('mobile') {
                 position: relative;
-                top:auto;
-                right:auto;
-                width: 200px;
-                margin:0 auto;
+                top: auto;
+                right: auto;
+                // width: 200px;
+                margin: 0 auto;
+                text-align: center;
             }
-            a{
-                display: block;
-                padding:13px 30px;
+            span.name {
+                font-size: 1.25em;
+                margin-right: 5px;
+                text-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 8px #fff;
+                @media(max-width: 480px){
+                    display: block;
+                    margin-bottom:5px;
+                }
+            }
+            select {
+                display: inline-block;
+                width: 150px;
+                height: 3.1em;
+                margin-right: 5px;
+                @media(max-width: 480px) {
+                    height: 2.5em;
+                   margin-top:1px;
+                }
+            }
+            a {
+                display: inline-block;
+                padding: 13px 30px;
                 text-align: center;
                 background-color: #312a21;
-                color:#fff;
+                color: #fff;
                 border-radius: 5px;
-                &:hover{
-                    background-color:lighten(#312a21, 20);
+                @media(max-width: 480px) {
+                    padding: 8px 30px;
                 }
-
+                &:hover {
+                    background-color: lighten(#312a21, 20);
+                }
             }
         }
     }
 }
 // 
 .hidden {
-    display: none!important;
+    display: none !important;
 }
 .xs_hidden {
     @include screen('xs_mobile') {
-        display: none!important;
+        display: none !important;
     }
 }

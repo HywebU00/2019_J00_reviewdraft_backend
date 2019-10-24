@@ -75,3 +75,8 @@
         background-size: 15px;
     }
 }
+*[class*="notice_required"]{
+     background-color: rgba(255, 210, 210, .6);
+     color: maroon;
+      padding: .4em 1.5em;
+}

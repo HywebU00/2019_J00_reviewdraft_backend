@@ -3,13 +3,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     background-color: #f8f8f8;
-     border-top: lighten($thirdColor, 15) 9px solid;
+    border-top: lighten($thirdColor, 15) 9px solid;
+    clear: both;
     @include screen('xs_mobile') {
         width: 100%;
     }
-    tr{
-        &:hover{
-             background-color: lighten($color-yellow, 43);
+    tr {
+        &:hover {
+            background-color: lighten($color-yellow, 43);
         }
     }
     th,
@@ -21,14 +22,16 @@ table {
         word-break: break-all;
         a {
             word-break: break-all;
-            color:$aHover;
+            color: $aHover;
+            &:hover {
+                    text-decoration: underline;
+                }
         }
     }
     th {
-        background-color:$thirdColor;
+        background-color: $thirdColor;
         color: #fff;
         border: #ccc 1px solid;
-       
         text-align: center;
         white-space: nowrap;
         font-weight: 400;
@@ -43,10 +46,10 @@ table {
             background: #F5F5F5;
         }
     }
-    .aCenter{
-       text-align: center;
+    .aCenter, .date {
+        text-align: center;
     }
-    .aRight{
+    .aRight {
         text-align: right;
     }
 }
@@ -60,8 +63,8 @@ table {
         tr {
             display: block;
         }
-        th[scope="row"]{
-            width: 100%!important;
+        th[scope="row"] {
+            width: 100% !important;
         }
         thead tr {
             position: absolute;
@@ -93,6 +96,12 @@ table {
                 font-weight: bold;
                 color: #000;
             }
+        }
+        .aCenter, .date {
+            text-align: left;
+        }
+        .aRight {
+            text-align: left;
         }
     }
 }
@@ -166,12 +175,11 @@ table {
             width: 100%;
             // display:none;
             min-width: 600px;
-
         }
     }
 }
-.scroltable{
-    min-width:600px !important;
+.scroltable {
+    min-width: 600px !important;
 }
 .scroltable-wrapper {
     position: relative;
@@ -192,7 +200,7 @@ table {
 }
 .scroltable-nav.scroltable-nav-left {
     left: 0;
-    @include gradient(rgba(255,255,255,1),rgba(255,255,255,0),horizontal);
+    @include gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), horizontal);
     .tablearrow_left {
         position: fixed;
         left: 0em;
@@ -217,7 +225,7 @@ table {
 }
 .scroltable-nav.scroltable-nav-right {
     right: 0;
-    @include gradient(rgba(255,255,255,0),rgba(255,255,255,1),horizontal);
+    @include gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), horizontal);
     .tablearrow_right {
         position: fixed;
         top: 0em;

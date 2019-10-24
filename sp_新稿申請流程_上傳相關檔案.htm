@@ -116,38 +116,108 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li>會員登入</li>
+                        <li><a href="#">會員管理</a></li>
+                        <li>新稿申請</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">會員登入</h2>
+                <h2 class="title">新稿申請</h2>
                 <!--SP Start -->
                 <section class="sp">
-                    <!-- 會員登入 start -->
-                    <div class="member_block">
-                        <form action="" class="form_grid">
-                            <div class="form_grp">
-                                <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>會員帳號</label>
-                                <div class="form_content">
-                                    <input name="username" type="text" placeholder="請輸入文字">
-                                </div>
-                            </div>
-                            <div class="form_grp">
-                                <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>會員密碼</label>
-                                <div class="form_content">
-                                    <input name="password" type="password" placeholder="請輸入密碼">
-                                    <div class="forget_password"><a class="" href="#">忘記密碼</a></div>
-                                </div>
-                            </div>
-                            <div class="verification">
-                                <p>請帶顯示綠色勾勾後再點選「會員登入」</p>
-                            </div>
-                            <div class="btn_grp">
-                                <button class="btn btn-submit">會員登入</button>
-                            </div>
-                        </form>
+                    <!-- 申請步驟start -->
+                    <div class="step_block">
+                        <ul>
+                            <li>1.填寫基本資料</li>
+                            <li class="active">2.上傳相關檔案</li>
+                            <li>3.送出申請</li>
+                        </ul>
                     </div>
-                    <!-- 會員登入 end -->
+                    <!-- 申請步驟end -->
+                    <form action="" class="form_grid">
+                        <!-- 上傳相關檔案 start -->
+                        <div class="basic_information">
+                            <div class="content">
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>投稿文章電子檔<span class="thsec_explain">(檔案格式：.doc/.docx)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>著作財產權授權協議書<span class="thsec_explain">(檔案格式：.doc/.docx)</span></label>
+                                    <div class="form_content">
+                                        <div class="upload_grp">
+                                            <input class="upload_file" type="text" readonly>
+                                            <div class="upload_btn">
+                                                <span>上傳檔案</span>
+                                                <input type="file" class="check_file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">其他(請註明)<span class="thsec_explain">(檔案格式：.pdf)</span>
+                                        <div class="icon_example">範例</div></label>
+                                    <div class="form_content">
+                                        <div class="table_list formintable">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="text" name="" value="" placeholder=""></td>
+                                                        <td>
+                                                            <div class="upload_grp">
+                                                                <input class="upload_file" type="text" readonly>
+                                                                <div class="upload_btn">
+                                                                    <span>上傳檔案</span>
+                                                                    <input type="file" class="check_file" />
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <ul class="addreducebtn">
+                                                                <li><a href="#"><img src="images/icon_add.png" alt="增加"></a></li>
+                                                                <li><a href="#"><img src="images/icon_reduce.png" alt="減少"></a></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" name="" value="" placeholder=""></td>
+                                                        <td>
+                                                            <div class="upload_grp">
+                                                                <input class="upload_file" type="text" readonly>
+                                                                <div class="upload_btn">
+                                                                    <span>上傳檔案</span>
+                                                                    <input type="file" class="check_file" />
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <ul class="addreducebtn">
+                                                                <li><a href="#"><img src="images/icon_add.png" alt="增加"></a></li>
+                                                                <li><a href="#"><img src="images/icon_reduce.png" alt="減少"></a></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上傳相關檔案 end -->
+                        <div class="btn_grp">
+                            <button class="btn stepbtn_prev" type="button">上一步</button>
+                            <button class="btn stepbtn_submit" type="submit">暫存</button>
+                            <button class="btn stepbtn_next" type="button">下一步</button>
+                        </div>
+                    </form>
                 </section>
                 <!-- SP End -->
             </div>
