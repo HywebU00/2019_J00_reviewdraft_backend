@@ -25,7 +25,7 @@
         padding: 30px 10px;
     }
     .btn {
-        padding: 1em 8em;
+        padding: 1em 3em;
         background: none;
         background-color: $primaryColor;
         border-radius: 0;
@@ -33,6 +33,10 @@
             padding: 1em 5em;
             width: 100%;
         }
+    }
+    .btn-reset {
+        background-color: $color-purple;
+        color: #fff;
     }
     .form_grid {
         .form_title {
@@ -132,6 +136,56 @@
                 &:before {
                     background-image: none;
                 }
+            }
+        }
+    }
+}
+// 申請步驟2
+.step_block2 {
+    margin-bottom: 40px;
+    clear: both;
+    ul {
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            background-color: $thirdColor;
+            color: #fff;
+            padding: 20px 30px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            font-size: 1.125em;
+            position: relative;
+            text-align: center;
+            @include screen('tablet') {
+                padding: 20px;
+            }
+            @include screen('xs_mobile') {
+                margin-right: 0px;
+                margin-bottom: 20px;
+                display: block;
+                padding: 15px 20px;
+            }
+            &.active {
+                background-color: $primaryColor;
+                color: #fff;
+                position: relative;
+                &:before {
+                    content: '';
+                    border: 10px solid $primaryColor;
+                    border-color: $primaryColor transparent transparent transparent;
+                    position: absolute;
+                    bottom: -18px;
+                    left: 43%;
+                    @include screen('xs_mobile') {
+                        left: 47%;
+                    }
+                }
+            }
+            &:last-child {
+                margin-right: 0px;
             }
         }
     }
@@ -294,7 +348,7 @@
     padding: 1em 5em;
     border: none;
     position: relative;
-    @media(max-width: 500px){
+    @media(max-width: 500px) {
         width: 210px;
     }
     &:hover {
@@ -322,7 +376,7 @@
     padding: 1em 5em;
     border: none;
     position: relative;
-    @media(max-width: 500px){
+    @media(max-width: 500px) {
         width: 210px;
     }
     &:hover {
@@ -350,7 +404,7 @@
     padding: 1em 5em;
     border: none;
     position: relative;
-    @media(max-width: 500px){
+    @media(max-width: 500px) {
         width: 210px;
     }
     &:hover {
@@ -523,15 +577,15 @@
             margin: 0 .5%;
             width: 19%;
             list-style: none;
-            @include screen('mobile'){
+            @include screen('mobile') {
                 width: 32%;
                 margin: 0 .66% 8px;
             }
-            @media(max-width: 480px){
+            @media(max-width: 480px) {
                 width: 48%;
                 margin: 0 1% 8px;
             }
-            @media(max-width: 380px){
+            @media(max-width: 380px) {
                 width: 100%;
                 margin: 0 0 8px;
             }
@@ -566,21 +620,20 @@
         }
     }
 }
-
 // 預審建議標題
-.pre_trial_title{
+.pre_trial_title {
     position: relative;
-    background-color:#000;
-    color:#fff;
-    padding:12px 30px;
-    margin:0 0 30px;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 30px;
+    margin: 0 0 30px;
     border-radius: 5px;
     font-size: 1.5em;
-    .close{
+    .close {
         position: absolute;
-        right:10px;
-        top:8px;
-        a{
+        right: 10px;
+        top: 8px;
+        a {
             display: block;
         }
     }

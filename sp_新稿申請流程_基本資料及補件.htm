@@ -130,7 +130,7 @@
                         <button type="button">回覆建議</button>
                     </div>
                     <!-- 申請步驟start -->
-                    <div class="step_block">
+                    <div class="step_block2">
                         <ul>
                             <li class="active">1.填寫基本資料</li>
                             <li>2.上傳相關檔案</li>
@@ -147,16 +147,27 @@
                                 <div class="form_grp">
                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>論文中文題目</label>
                                     <div class="form_content hasbtn">
-                                        <input type="text" id="">
-                                        <button type="button">確認帳號是否重複</button>
+                                        <input type="text" >
+                                        <button type="button" id="openModal">確認主題是否重複</button>
                                     </div>
+                                    <!--燈箱 start-->
+                                    <div id="modal1" class="modal">
+                                        <h2>題目確認</h2>
+                                        <div class="contentblock">
+                                            <div class="liketheme">題目相似項目，共<em>2</em>項</div>
+                                            <p>內容題目相似項目內<em>精確度</em>容題目相似項目內容題目相似項目內容題目相似項目內容題目相似項目；內容題目相<em>精確度</em>似項目內容題目相似項目內容題目相似項目內<em>精確度</em>容題目相似項目內容題目相似項目內容題目相似項目內容題目相似項目；內容題目相<em>精確度</em>似項目內容題目相似項目</p>
+                                        </div>
+                                        <button type="button" class="closebtn">關閉</button>
+                                    </div>
+                                    <!--燈箱 end-->
                                 </div>
                                 <div class="form_grp">
                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>論文英文題目</label>
                                     <div class="form_content hasbtn">
-                                        <input type="text" id="">
-                                        <button type="button">確認帳號是否重複</button>
+                                        <input type="text">
+                                        <button type="button" id="">確認主題是否重複</button>
                                     </div>
+                                    
                                 </div>
                                 <div class="form_grp">
                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>論文中文摘要</label>

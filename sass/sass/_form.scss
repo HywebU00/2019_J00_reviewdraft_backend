@@ -81,7 +81,7 @@ select::-ms-expand {
                 width: 10.5em;
                 position: absolute;
                 background: none;
-                background-color: #f39823 !important;
+                background-color: $color-orange !important;
                 border: none;
                 color: #fff;
                 text-shadow: none;
@@ -93,6 +93,10 @@ select::-ms-expand {
                     right: 0;
                     left: 0;
                     margin-bottom: 5px;
+                }
+                &:hover, &:focus{
+                   border: none !important;
+                   background-color:darken($color-orange, 10)!important; 
                 }
             }
         }

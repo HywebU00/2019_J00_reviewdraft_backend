@@ -141,9 +141,18 @@
                                 <div class="form_grp">
                                     <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>帳號(主要mail)</label>
                                     <div class="form_content hasbtn">
-                                        <input type="text" id="">
-                                        <button type="button">確認帳號是否重複</button>
+                                        <input type="text">
+                                        <button type="button" id="openModal">確認帳號是否重複</button>
                                     </div>
+                                    <!--燈箱 start-->
+                                    <div id="modal1" class="modal">
+                                        <h2>帳號重複提醒</h2>
+                                        <div class="contentblock">
+                                            <p>帳號無重複，請繼續註冊流程</p>
+                                        </div>
+                                        <button type="button" class="closebtn">關閉</button>
+                                    </div>
+                                    <!--燈箱 end-->
                                 </div>
                                 <div class="form_grp">
                                     <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>密碼</label>
