@@ -592,15 +592,15 @@
             a {
                 display: block;
                 background-color: #eee;
-                color: #000;
+                color: #fff;
                 text-align: center;
                 height: 170px;
                 padding: 50px 10px 20px;
                 border: 1px solid #dfdfdf;
-                @include gradient(#dfdfdf, #eee, vertical);
+                @include gradient($primaryColor, $thirdColor, horizontal);
                 @include box-sizing;
                 &:hover {
-                    @include gradient(#f5f5f5, #eee, vertical);
+                    @include gradient(lighten($primaryColor,5), lighten($thirdColor,5), horizontal);
                 }
                 span {
                     display: block;
@@ -611,9 +611,9 @@
                     }
                 }
                 &.tobe_processed {
-                    @include gradient(#eebdbd, #f4d4d4, vertical);
+                    @include gradient(#75191b, #b25ba2, horizontal);
                     &:hover {
-                        @include gradient(#fee1e1, #f4d4d4, vertical);
+                        @include gradient(lighten(#75191b,5), lighten(#b25ba2,5), horizontal);
                     }
                 }
             }
