@@ -182,3 +182,13 @@ $(function() {
     $('.modal .close').click(closeModal);
     $('.modal .closebtn').click(closeModal);
 }); 
+
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+});

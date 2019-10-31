@@ -2,7 +2,7 @@
     @include box-sizing;
     margin: 0 auto;
     min-height: 4.3em;
-    position: fixed;
+    background-color: $color-word;
     z-index: 999;
     // 預設選單 ul
     clear: both;
@@ -291,6 +291,48 @@
                                 display: none !important;
                             }
                         }
+                    }
+                }
+            }
+        }
+        // 會員登入start
+        .inheader {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            // 
+            .login_btn {
+                span.name {
+                    font-size: 1.25em;
+                    margin-right: 5px;
+                    text-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 8px #fff;
+                    @media(max-width: 480px) {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+                select {
+                    display: inline-block;
+                    width: 150px;
+                    height: 3.1em;
+                    margin-right: 5px;
+                    @media(max-width: 480px) {
+                        height: 2.5em;
+                        margin-top: 1px;
+                    }
+                }
+                a {
+                    display: inline-block;
+                    padding: 13px 30px;
+                    text-align: center;
+                    background-color: #312a21;
+                    color: #fff;
+                    border-radius: 5px;
+                    @media(max-width: 480px) {
+                        padding: 8px 30px;
+                    }
+                    &:hover {
+                        background-color: lighten(#312a21, 20);
                     }
                 }
             }

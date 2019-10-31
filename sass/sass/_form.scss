@@ -38,6 +38,7 @@ select::-ms-expand {
         position: relative;
         @include gutter();
         padding-top: 10px;
+        font-weight: 600;
         @include screen('mobile') {
             width: 100%;
         }
@@ -253,6 +254,7 @@ select::-ms-expand {
             @include screen('xs_mobile') {
                 width: 100%;
                 display: block;
+                padding-right:0em;
             }
             &+.datepick {
                 margin-left: .3em;
@@ -279,9 +281,9 @@ select::-ms-expand {
             }
             i {
                 position: absolute;
-                padding: .37em .1em !important;
+                padding: .1em .1em !important;
                 right: 1em;
-                top: .2em;
+                top: .4em;
                 min-width: 1em;
                 background: none;
                 border: none;
@@ -290,6 +292,9 @@ select::-ms-expand {
                 &:hover, &:focus {
                     box-shadow: none;
                     border: none !important;
+                }
+                @include screen('xs_mobile'){
+                    right: .5em;
                 }
             }
             >input[type="text"] {

@@ -28,10 +28,29 @@
         <header class="header">
             <div class="container">
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="index.htm">國立彰化師範大學<span>師資培育與教師專業發展期刊 系統後台</span></a>
+                </h1>
+                <!--  會員登入start -->
+                <!-- <div class="inheader">
+                    <div class="login_btn"><a href="#">會員申請/登入</a></div>
+                </div> -->
+                <div class="inheader">
+                    <div class="login_btn">
+                        <!--  <span class="name">王小明您好</span> -->
+                        <select name="">
+                            <option value="">儀表板-投稿</option>
+                            <option value="">儀表板-委員</option>
+                            <option value="">基本資料</option>
+                        </select>
+                        <a href="#">登出</a>
+                    </div>
+                </div>
+                <!--  會員登入start -->
                 <!-- menu Start -->
                 <nav class="menu">
                     <ul>
-                        <li><a href="#">刊物簡介</a>
+                        <li><a href="#">稿件管理</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -39,8 +58,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="http://www.google.com">刊物簡介</a></li>
-                        <li><a href="http://www.google.com">刊物簡介</a>
+                        <li><a href="http://www.google.com">出刊與匯出</a>
                             <ul>
                                 <li><a href="http://www.google.com">第二層有連結</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -52,7 +70,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">卷期索引</a>
+                        <li><a href="#">帳號資料管理</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -71,7 +89,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">最新消息</a>
+                        <li><a href="#">基本設定</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -79,7 +97,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">相關連結</a>
+                        <li><a href="#">網站管理</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -90,9 +108,6 @@
                     </ul>
                 </nav>
                 <!-- menu End -->
-                <h1>
-                    <a href="index.htm">國立彰化師範大學<span>師資培育與教師專業發展期刊</span></a>
-                </h1>
             </div>
         </header>
         <!-- header End -->
@@ -100,17 +115,6 @@
         <div id="center" class="main innerpage">
             <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-            <!-- 內頁標頭 start -->
-            <section class="col-12 inheader_block">
-                <div class="container">
-                    <div class="col">
-                        <div class="inheader">
-                            <div class="login_btn"><a href="#">會員申請/登入</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- 內頁標頭 end-->
             <div class="container">
                 <div class="breadcrumb">
                     <ul>
@@ -123,82 +127,168 @@
                 <h2 class="title">儀表板</h2>
                 <!-- SP Start -->
                 <section class="sp">
+                    <h3>稿件管理</h3>
                     <div class="suggest_btn"><button type="button">新增稿件＋</button></div>
                     <!-- 儀表板start-->
                     <div class="dashboard_block">
                         <ul>
-                            <li><a href="#"><span><em>2</em>件</span>編輯中</a></li>
+                            <li><a href="#"><span><em>923</em>件</span>編輯中</a></li>
                             <li><a href="#" class="tobe_processed"><span><em>3</em>件</span>待回覆</a></li>
-                             <li><a href="#" class="tobe_processed"><span><em>1</em>件</span>待付款</a></li>
-                             <li><a href="#"><span><em>2</em>件</span>審查中</a></li>
-                             <li><a href="#"><span><em>1</em>件</span>已刊登</a></li>
+                            <li><a href="#" class="tobe_processed"><span><em>1</em>件</span>待付款</a></li>
+                            <li><a href="#"><span><em>2</em>件</span>審查中</a></li>
+                            <li><a href="#"><span><em>1</em>件</span>已刊登</a></li>
                         </ul>
                     </div>
                     <!-- 儀表板end-->
-                    <h3>稿件列表</h3>
-                    <!-- 表格查詢 Start-->
-                    <div class="searchkeyword">
-                        <span>共<em>10</em>件</span><input type="text" name="" value="請輸入標題關鍵字" placeholder="請輸入標題關鍵"><input type="button" name="" value="查詢">
+                    <h3>查詢條件</h3>
+                    <form action="" class="form_grid">
+                        <!-- 填寫基本資料 start -->
+                        <div class="basic_information">
+                            <div class="content">
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>投稿日期</label>
+                                    <div class="form_content">
+                                        <div class="datepick">
+                                            <input name="" type="text" value="" class="calendar" placeholder="開始日期">
+                                            <i class="i_calendar"></i>
+                                        </div>
+                                        <div class="datepick">
+                                            <input name="" type="text" value="" class="calendar" placeholder="結束日期">
+                                            <i class="i_calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>稿件標題</label>
+                                    <div class="form_content">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名</label>
+                                    <div class="form_content">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>狀態</label>
+                                    <div class="form_content">
+                                        <select id="selectSample" name="">
+                                            <option value="">全部（不含預審退稿）</option>
+                                            <option value="">預審階段</option>
+                                            <option value="">分配委員（僅分配）</option>
+                                            <option value="">分配委員</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 填寫基本資料 end -->
+                        <div class="btn_grp">
+                            <button class="btn stepbtn_submit" type="submit">查詢</button>
+                        </div>
+                    </form>
+                    <h3>稿件清單</h3>
+                    <!-- 筆數start -->
+                    <div class="numpens"><span>共<em>10</em>件</span></div>
+                    <!-- 筆數end -->
+                    <!-- 清單按鈕start -->
+                    <div class="listbtn">
+                        <button type="button" class="btn  btn-blue">列印審查意見及答辯</button><button type="button" class="btn  btn-blue">專刊登狀態</button><button type="button" class="btn  btn-blue">匯出稿件總表</button>
                     </div>
-                    <!-- 表格查詢 end-->
+                    <!-- 清單按鈕end  -->
                     <div class="table_list">
                         <table summary="">
                             <thead>
                                 <tr>
-                                    <th>編號</th>
-                                    <th>標題</th>
-                                    <th>申請時間</th>
+                                    <th><button type="button" class="btn btn-xs btn-green">全選</button></th>
                                     <th>狀態</th>
+                                    <th>編號</th>
+                                    <th>主題</th>
+                                    <th>投稿時間</th>
+                                    <th>投稿者</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">-</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">-</td>
-                                    <td data-title="狀態" class="aCenter"><a href="#">編輯中</a></td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">初審審查-待審查</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">-</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">-</td>
-                                    <td data-title="狀態" class="aCenter"><a href="#">編輯中</a></td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">付款確認</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">2017A10021</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">2017/5/1 12:00</td>
-                                    <td data-title="狀態" class="aCenter"><a href="#">待付款</a></td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">主編配稿-待分配</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">2017A10021</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">2017/5/1 12:00</td>
-                                    <td data-title="狀態" class="aCenter"><a href="#">待回覆</a></td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">初審審查-待審查</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">2017A10021</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">2017/5/1 12:00</td>
-                                    <td data-title="狀態" class="aCenter"><a href="#">待回覆</a></td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">付款確認</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">2017A10021</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">2017/5/1 12:00</td>
-                                    <td data-title="狀態" class="aCenter"><a href="#">待回覆</a></td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">主編配稿-待分配</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">2017A10021</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">2017/5/1 12:00</td>
-                                    <td data-title="狀態" class="aCenter">審查中</td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">初審審查-待審查</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="編號" class="aCenter">2017A10021</td>
-                                    <td data-title="標題"><a href="#">护理干预对老年中风患者生活质量的影响</a></td>
-                                    <td data-title="申請時間" class="date">2017/5/1 12:00</td>
-                                    <td data-title="狀態" class="aCenter">審查中</td>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">付款確認</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">主編配稿-待分配</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="aCenter"><input type="checkbox" name="" value=""></td>
+                                    <td data-title="狀態"><a href="#">初審審查-待審查</a></td>
+                                    <td data-title="編號" class="aCenter">2017A0061</td>
+                                    <td data-title="主題">护理干预对老年中风患者生活质量的影响</td>
+                                    <td data-title="投稿時間" class="date">2017/5/1 12:00</td>
+                                    <td data-title="投稿者" class="aCenter"><a href="#">王小明</a></td>
                                 </tr>
                             </tbody>
                         </table>

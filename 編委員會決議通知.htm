@@ -29,29 +29,39 @@
         <div id="center" class="main innerpage">
             <!-- 內頁新增一個classname-->
             <div class="container">
-                <div class="pre_trial_title">預審建議 <span class="close"><a href="#"><img src="images/icon_close.png"></a></span></div>
+                <div class="pre_trial_title">編委員會決議通知 <span class="close"><a href="#"><img src="images/icon_close.png"></a></span></div>
                 <!--SP Start -->
                 <section class="sp">
                     <form action="" class="form_grid">
+                        <h3>審查結果</h3>
                         <!-- 填寫基本資料 start -->
                         <div class="basic_information">
                             <div class="content">
                                 <div class="form_grp">
-                                    <label for="" class="form_title">預審結果</label>
+                                    <label for="" class="form_title">審查結果</label>
+                                    <div class="form_content">
+                                        <!--最外層的form 或 radio_grp class加上form_inline-->
+                                        <div class="radio_grp">
+                                            <label><input name="radioSample" type="radio" value="">交由原作者修改後再審(通知作者)</label>
+                                            <label><input name="radioSample" type="radio" value="">作者已答辯，調整作者答辯內容後，交由原審查者複審(通知審查者)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">最後決策(通知作者)</label>
                                     <div class="form_content">
                                         <select name="" id="">
                                             <option value="">請選擇</option>
-                                            <option value="">預審通過</option>
-                                            <option value="">預審失敗</option>
-                                            <option value="">退回草稿修正</option>
+                                            <option value="">刊登</option>
+                                            <option value="">不予刊登</option>
+                                            <option value="">修改後接受（交由原作者再修改後刊登)</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form_grp">
-                                    <label for="" class="form_title">退件原因</label>
+                                    <label for="" class="form_title">備註</label>
                                     <div class="form_content">
                                         <textarea name="" id="" cols="30" rows="3"></textarea>
-                                        <div>註：若為「退回草稿修改」，請寫退件原因以利投稿者修改</div>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +70,7 @@
                         <div class="btn_grp">
                             <button class="btn stepbtn_reset" type="reset">取消</button>
                             <button class="btn stepbtn_submit" type="submit">暫存</button>
-                            <button class="btn stepbtn_submit" type="submit">儲存</button>
+                            <button class="btn stepbtn_submit" type="submit">送出</button>
                         </div>
                     </form>
                 </section>

@@ -310,3 +310,35 @@
         }
     }
 }
+.searchkeyword2{
+    overflow: hidden;
+    background-color:$primaryColor;
+    padding:.5em 1.5em ;
+
+    label{
+        width: 100px;
+        float: left;
+        font-size: 1.25em;
+        padding:12px 0 0;
+        color:#fff;
+    }
+    input {
+        width: auto !important;
+        margin: 0 3px 0 5px;
+    }   
+    @include screen('xs_mobile'){
+         padding:.5em 1.5em 1em;
+        label{
+            width: 100%;
+            text-align: center;
+        }
+        input{
+            width: 100%!important;
+            margin:0;
+        }
+        button{
+            width: 100%!important;
+            margin:3px 0;
+        }
+    }
+}

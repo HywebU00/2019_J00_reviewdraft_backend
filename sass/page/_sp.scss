@@ -237,6 +237,7 @@
 }
 // 基本資料
 .basic_information {
+    // border-top: lighten($color-blue, 5) 5px solid;
     .content {
         background-color: #f8f8f8;
         padding: 30px 50px;
@@ -245,6 +246,14 @@
         }
         @include screen('xs_mobile') {
             padding: 10px 10px;
+        }
+    }
+    .form_content {
+        table {
+            border-top: none;
+            th {
+                background-color: #fff
+            }
         }
     }
 }
@@ -581,11 +590,11 @@
                 width: 32%;
                 margin: 0 .66% 8px;
             }
-            @media(max-width: 480px) {
+            @include screen('xs_mobile') {
                 width: 48%;
                 margin: 0 1% 8px;
             }
-            @media(max-width: 380px) {
+            @media(max-width: 480px) {
                 width: 100%;
                 margin: 0 0 8px;
             }
@@ -594,28 +603,42 @@
                 background-color: #eee;
                 color: #fff;
                 text-align: center;
-                height: 170px;
+                height: 190px;
                 padding: 50px 10px 20px;
                 border: 1px solid #dfdfdf;
+                font-size: 1.125em;
                 @include gradient($primaryColor, $thirdColor, horizontal);
                 @include box-sizing;
                 &:hover {
-                    @include gradient(lighten($primaryColor,5), lighten($thirdColor,5), horizontal);
+                    @include gradient(lighten($primaryColor, 5), lighten($thirdColor, 5), horizontal);
                 }
                 span {
                     display: block;
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
+                    font-size: .938em;
                     em {
-                        font-size: 5em;
+                        font-size: 4em;
                         font-style: normal;
+                        position: relative;
+                        padding-right: 25px;
+                        font-weight: 500;
+                        &:after {
+                            content: '';
+                            width: 1px;
+                            height: 40px;
+                            background-color: #fff;
+                            position: absolute;
+                            right: 10px;
+                            bottom: 15px;
+                            transform: rotate(45deg);
+                        }
                     }
                 }
                 &.tobe_processed {
                     @include gradient(#75191b, #b25ba2, horizontal);
                     &:hover {
-                        @include gradient(lighten(#75191b,5), lighten(#b25ba2,5), horizontal);
+                        @include gradient(lighten(#75191b, 5), lighten(#b25ba2, 5), horizontal);
                     }
-                    
                 }
             }
         }
@@ -636,6 +659,195 @@
         top: 8px;
         a {
             display: block;
+        }
+    }
+}
+// 筆數
+.numpens {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    float: left;
+    font-size: 1.25em;
+    span {
+        em {
+            font-style: normal;
+            color: $color-orange;
+            margin: 0 5px;
+            font-weight: 500;
+        }
+    }
+}
+// 筆數
+.numpens2 {
+    font-size: 1.25em;
+    padding-top: 10px;
+    em {
+        font-style: normal;
+        color: $color-orange;
+        margin: 0 5px;
+        font-weight: 500;
+    }
+}
+//選擇委員
+.selectcommittee {
+    float: left;
+}
+// 清單按鈕starts
+.listbtn {
+    float: right;
+    margin-bottom: 5px;
+}
+//功能select
+.function_block {
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0 0 15px;
+    // background-color:#f8f8f8;
+    border-bottom: 1px solid #ccc;
+    .function_grp {
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .function_title {
+        float: left;
+        width: 180px;
+        padding-top: 10px;
+        font-size: 1.25em;
+        color: #333;
+        font-weight: 500;
+        @include screen('xs_mobile') {
+            width: 100%;
+            float: none;
+        }
+    }
+    .function_content {
+        float: left;
+        width: calc(100% - 180px);
+        position: relative;
+        @include screen('xs_mobile') {
+            width: 100%;
+            float: none;
+        }
+        &.hasbtn {
+            >input[type="text"] {
+                width: calc(100% - 6em) !important;
+                @media(max-width: 480px) {
+                    width: 100% !important;
+                }
+            }
+            button {
+                padding: .5em 1em !important;
+                right: 0em;
+                top: 0px;
+                font-size: 1em;
+                margin: 0;
+                width: 5.5em;
+                position: absolute;
+                background: none;
+                background-color: $color-orange !important;
+                border: none;
+                color: #fff;
+                text-shadow: none;
+                @include text-overflow;
+                @media(max-width: 480px) {
+                    position: relative;
+                    width: 100%;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    margin-bottom: 5px;
+                }
+                &:hover, &:focus {
+                    border: none !important;
+                    background-color: darken($color-orange, 10) !important;
+                }
+            }
+        }
+    }
+}
+//article_selection 出刊文章選擇 
+.article_selection {
+    overflow: hidden;
+    margin: 50px 0;
+    .leftblock {
+        @include make-xs-column(12);
+        @include make-sm-column(5);
+        @include make-md-column(5);
+        @include make-lg-column(5);
+    }
+    .middleblock {
+        @include make-xs-column(12);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+    }
+    .rightblock {
+        @include make-xs-column(12);
+        @include make-sm-column(5);
+        @include make-md-column(5);
+        @include make-lg-column(5);
+    }
+    .table_list {
+        td, th {
+            border: #ccc 1px solid !important;
+            padding: .5em .3em;
+        }
+        .btn {
+            padding: .5em 0em;
+            font-size: .813em;
+        }
+        .time {
+            display: inline-block;
+        }
+        input[type="text"] {
+            width: 50px;
+        }
+    }
+    .adddelbtn {
+        width: 100px;
+        margin: 10em auto;
+        text-align: center;
+        ul {
+            margin: auto;
+            padding: 0;
+            @include box-sizing;
+            li {
+                list-style: none;
+                margin-bottom: 5em;
+                a {
+                    background-color: $primaryColor;
+                    color: #fff;
+                    padding: 1em 2em 1em 1em;
+                    display: block;
+                    position: relative;
+                    &.addbtn {
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            border: 2px solid #fff;
+                            width: 8px;
+                            height: 8px;
+                            border-color: #fff #fff transparent transparent;
+                            right: 20px;
+                            top: 21px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    &.delbtn {
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            border: 2px solid #fff;
+                            width: 8px;
+                            height: 8px;
+                            border-color: #fff transparent transparent #fff;
+                            right: 15px;
+                            top: 21px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
         }
     }
 }

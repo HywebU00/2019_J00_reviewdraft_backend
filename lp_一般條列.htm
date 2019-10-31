@@ -28,10 +28,29 @@
         <header class="header">
             <div class="container">
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1>
+                    <a href="index.htm">國立彰化師範大學<span>師資培育與教師專業發展期刊 系統後台</span></a>
+                </h1>
+                <!--  會員登入start -->
+                <!-- <div class="inheader">
+                    <div class="login_btn"><a href="#">會員申請/登入</a></div>
+                </div> -->
+                <div class="inheader">
+                    <div class="login_btn">
+                        <!--  <span class="name">王小明您好</span> -->
+                        <select name="">
+                            <option value="">儀表板-投稿</option>
+                            <option value="">儀表板-委員</option>
+                            <option value="">基本資料</option>
+                        </select>
+                        <a href="#">登出</a>
+                    </div>
+                </div>
+                <!--  會員登入start -->
                 <!-- menu Start -->
                 <nav class="menu">
                     <ul>
-                        <li><a href="#">刊物簡介</a>
+                        <li><a href="#">稿件管理</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -39,8 +58,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="http://www.google.com">刊物簡介</a></li>
-                        <li><a href="http://www.google.com">刊物簡介</a>
+                        <li><a href="http://www.google.com">出刊與匯出</a>
                             <ul>
                                 <li><a href="http://www.google.com">第二層有連結</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -52,7 +70,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">卷期索引</a>
+                        <li><a href="#">帳號資料管理</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -71,7 +89,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">最新消息</a>
+                        <li><a href="#">基本設定</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -79,7 +97,7 @@
                                 <li><a href="#">第二層選單</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">相關連結</a>
+                        <li><a href="#">網站管理</a>
                             <ul>
                                 <li><a href="#">第二層選單</a></li>
                                 <li><a href="#">第二層選單</a></li>
@@ -90,9 +108,6 @@
                     </ul>
                 </nav>
                 <!-- menu End -->
-                <h1>
-                    <a href="index.htm">國立彰化師範大學<span>師資培育與教師專業發展期刊</span></a>
-                </h1>
             </div>
         </header>
         <!-- header End -->
@@ -100,99 +115,72 @@
         <div id="center" class="main innerpage">
             <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-            <!-- 內頁標頭 start -->
-            <section class="col-12 inheader_block">
-                <div class="container">
-                    <div class="col">
-                        <div class="inheader">
-                            <div class="login_btn"><a href="#">會員申請/登入</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- 內頁標頭 end-->
             <div class="container">
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
+                        <li><a href="#">網站管理</a></li>
                         <li>最新消息</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
                 <h2 class="title">最新消息</h2>
-                    <!-- function功能區塊 -->
-                    <!-- <div class="function">
-                        <ul>
-                            <li><a href="#">回上一頁</a></li>
-                            <li><a href="#">友善列印</a></li>
-                            <li><a href="#">轉寄友人</a></li>
-                        </ul>
-                    </div> -->
                 <!-- LP Start -->
                 <section class="lp">
-                    <!-- category -->
-                    <!-- <div class="category">
-                        <ul>
-                            <li><a href="#">標籤1</a></li>
-                            <li><a href="#">標籤2</a></li>
-                            <li><a href="#">標籤3</a></li>
-                            <li><a href="#">標籤4</a></li>
-                            <li><a href="#">標籤5</a></li>
-                            <li><a href="#">標籤6</a></li>
-                            <li><a href="#">標籤7</a></li>
-                            <li><a href="#">標籤8</a></li>
-                            <li><a href="#">標籤9</a></li>
-                            <li><a href="#">標籤10</a></li>
-                        </ul>
-                    </div> -->
+                    <div class="suggest_btn"><button type="button">新增＋</button></div>
+                    <!-- 查詢start -->
+                    <div class="searchkeyword2"><label for="">標題</label><input type="text" name="" value="請輸入關鍵字" placeholder="請輸入關鍵字"><button type="submit" class="btn btn-orange">查詢</button>
+                    </div>
+                    <!-- 查詢end -->
+                    <!-- 筆數start -->
+                    <div class="numpens"><span>共<em>10</em>件</span></div>
+                    <!-- 筆數end -->
                     <div class="table_list">
                         <table summary="">
                             <thead>
                                 <tr>
                                     <th>標題</th>
-                                    <th>日期</th>
+                                    <th>順序</th>
+                                    <th>更新日期</th>
+                                    <th>創建者</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
                                     <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
+                                    <td data-title="順序" class="aCenter">1</td>
+                                    <td data-title="更新日期" class="date">2018/01/01</td>
+                                    <td data-title="創建者" class="aCenter">朱毓婷</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">春節不無聊上網學習環境教育</a></td>
+                                    <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
+                                    <td data-title="順序" class="aCenter">2</td>
+                                    <td data-title="更新日期" class="date">2018/01/01</td>
+                                    <td data-title="創建者" class="aCenter">朱毓婷</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">洗錢防制，國家向前</a></td>
+                                    <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
+                                    <td data-title="順序" class="aCenter">3</td>
+                                    <td data-title="更新日期" class="date">2018/01/01</td>
+                                    <td data-title="創建者" class="aCenter">朱毓婷</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">春節送禮認標章 環保減碳又健康</a></td>
+                                    <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
+                                    <td data-title="順序" class="aCenter">4</td>
+                                    <td data-title="更新日期" class="date">2018/01/01</td>
+                                    <td data-title="創建者" class="aCenter">朱毓婷</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">環保替代役歲末新春送溫暖</a></td>
+                                    <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
+                                    <td data-title="順序" class="aCenter">5</td>
+                                    <td data-title="更新日期" class="date">2018/01/01</td>
+                                    <td data-title="創建者" class="aCenter">朱毓婷</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">向非法化學物質說不 安全蛋品 吃得健康</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">春節期間廚餘回收真惜福 狗年來富又來福</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">春節長假看Chem Life，增長知識又可抽獎</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">金狗年春節旅遊好去處，環保署報你知</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="日期" class="date">2018/01/01</td>
-                                    <td data-title="標題"><a href="#">清新空氣保健康 神明歡喜過好年</a></td>
+                                    <td data-title="標題"><a href="#">通勤搭車看預報 環保集點10倍送</a></td>
+                                    <td data-title="順序" class="aCenter">6</td>
+                                    <td data-title="更新日期" class="date">2018/01/01</td>
+                                    <td data-title="創建者" class="aCenter">朱毓婷</td>
                                 </tr>
                             </tbody>
                         </table>
