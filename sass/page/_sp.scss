@@ -529,15 +529,16 @@
     text-align: right;
     button {
         background: none !important;
-        background-color: #000 !important;
+        background-color: #266cbb!important;
         color: #fff;
-        border: 1px solid #000;
+        border: 1px solid #266cbb;
         text-shadow: none;
         padding: .8em 1em !important;
+        border-radius: 0;
         &:hover {
             padding: .8em 1em !important;
-            border: 1px solid #666 !important;
-            background-color: #666 !important;
+            border: 1px solid darken(#266cbb,10) !important;
+            background-color: darken(#266cbb,10)!important; 
             color: #fff;
         }
     }
@@ -644,10 +645,10 @@
                 padding: 50px 10px 20px;
                 border: 1px solid #dfdfdf;
                 font-size: 1.125em;
-                @include gradient($primaryColor, $thirdColor, horizontal);
+                @include gradient($primaryColor, $thirdColor, diagonal);
                 @include box-sizing;
                 &:hover {
-                    @include gradient(lighten($primaryColor, 5), lighten($thirdColor, 5), horizontal);
+                    @include gradient(lighten($primaryColor, 5), lighten($thirdColor, 5), diagonal);
                 }
                 span {
                     display: block;
@@ -672,9 +673,9 @@
                     }
                 }
                 &.tobe_processed {
-                    @include gradient(#75191b, #b25ba2, horizontal);
+                    @include gradient(#f48865, #ffd151, diagonal);
                     &:hover {
-                        @include gradient(lighten(#75191b, 5), lighten(#b25ba2, 5), horizontal);
+                        @include gradient(lighten(#f48865, 5), lighten(#ffd151, 5), diagonal);
                     }
                 }
             }
@@ -704,11 +705,11 @@
     margin-top: 15px;
     margin-bottom: 10px;
     float: left;
-    font-size: 1.25em;
+    font-size: 1.375em;
     span {
         em {
             font-style: normal;
-            color: $color-orange;
+            color: #3278c8;
             margin: 0 5px;
             font-weight: 500;
         }
@@ -733,6 +734,16 @@
 .listbtn {
     float: right;
     margin-bottom: 5px;
+    .btn{
+        border-radius: 0!important;
+            padding: 0.8em 1.5em!important;
+    }
+    .btn-blue{
+        &:hover, &:focus {
+            background-color: #266cbb!important;
+            border:1px solid #266cbb!important;
+        }
+    }
 }
 //功能select
 .function_block {
