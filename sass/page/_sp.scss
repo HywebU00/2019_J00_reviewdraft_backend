@@ -8,30 +8,28 @@
 }
 // 會員登入區塊
 .member_block {
-    width: 50%;
-    background-color: #fff;
     margin: 0 auto;
-    padding: 30px 50px;
-    box-shadow: 0 0 5px #ccc;
-    @include screen('tablet') {
-        width: 70%;
+    background-image: url('../images/loginblock_bg.png');
+    background-position: center top;
+    width: 523px;
+    height: 602px;
+    padding-top: 45px;
+    @include box-sizing;
+    position: relative;
+    .userlogin {
+        width: 129px;
+        margin: 0 auto;
     }
-    @include screen('mobile') {
-        width: 80%;
-        padding: 30px;
-    }
-    @include screen('xs_mobile') {
-        width: 100%;
-        padding: 30px 10px;
-    }
-    .btn {
-        padding: 1em 3em;
-        background: none;
-        background-color: $primaryColor;
-        border-radius: 0;
-        @include screen('mobile') {
-            padding: 1em 5em;
+    .btn_grp {
+        margin: 0px;
+        padding:0;
+        .btn {
+            padding: 1em 3em;
+            background: none;
+            background-color: $primaryColor;
             width: 100%;
+            font-size: 1.25em;
+            @include box-sizing;
         }
     }
     .btn-reset {
@@ -39,18 +37,41 @@
         color: #fff;
     }
     .form_grid {
+        margin: 0 85px;
+        .form_grp {
+            border: none !important;
+            padding-bottom: 0px;
+        }
         .form_title {
-            width: 130px !important;
-            @include screen('mobile') {
-                width: 100% !important;
-            }
+            width: 100% !important;
+            color: #434343;
+            font-weight: 400;
+            padding: 0;
+            margin: 0 0 5px;
+            letter-spacing: .1em;
         }
         .form_content {
-            width: calc(100% - 130px) !important;
-            @include screen('mobile') {
-                width: 100% !important;
-            }
+            width: 100% !important;
+             padding: 0;
         }
+        input {
+            border: none;
+        }
+        ::-webkit-input-placeholder {
+            /* Edge */
+            color: #ccc;
+        }
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #ccc;
+        }
+        ::placeholder {
+            color: #ccc;
+        }
+    }
+    .verification{
+        background-color:#fff;
+        border-radius: .2em;
     }
 }
 // 忘記密碼
