@@ -844,6 +844,9 @@
         width: 100px;
         margin: 10em auto;
         text-align: center;
+        @include screen('mobile'){
+            margin:1em auto;
+        }
         ul {
             margin: auto;
             padding: 0;
@@ -851,6 +854,9 @@
             li {
                 list-style: none;
                 margin-bottom: 5em;
+                @include screen('mobile'){
+                    margin-bottom: 2em;
+                }
                 a {
                     background-color: $primaryColor;
                     color: #fff;
@@ -868,6 +874,9 @@
                             right: 20px;
                             top: 21px;
                             transform: rotate(45deg);
+                            @include screen('mobile'){
+                                transform: rotate(135deg);
+                            }
                         }
                     }
                     &.delbtn {
@@ -881,6 +890,9 @@
                             right: 15px;
                             top: 21px;
                             transform: rotate(-45deg);
+                            @include screen('mobile'){
+                                transform: rotate(45deg);
+                            }
                         }
                     }
                 }
