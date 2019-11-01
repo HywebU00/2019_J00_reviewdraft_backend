@@ -86,6 +86,8 @@
     .verification{
         background-color:#fff;
         border-radius: .2em;
+        padding:10px;
+        @include box-sizing;
     }
 }
 // 忘記密碼
