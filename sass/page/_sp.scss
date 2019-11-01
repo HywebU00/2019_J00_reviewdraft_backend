@@ -12,10 +12,21 @@
     background-image: url('../images/loginblock_bg.png');
     background-position: center top;
     width: 523px;
-    height: 602px;
+    height: 591px;
     padding-top: 45px;
     @include box-sizing;
     position: relative;
+    @include screen('mobile'){
+        background-image: none;
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: 65px;
+        width: 80%;
+        height: auto;
+        padding:45px 0 75px;
+    }
+    @include screen('xs_mobile'){
+
+    }
     .userlogin {
         width: 129px;
         margin: 0 auto;
@@ -38,6 +49,9 @@
     }
     .form_grid {
         margin: 0 85px;
+        @include screen('xs_mobile'){
+            margin:0 40px;
+        }
         .form_grp {
             border: none !important;
             padding-bottom: 0px;
