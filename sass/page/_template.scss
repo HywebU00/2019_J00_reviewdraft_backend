@@ -49,7 +49,7 @@ body {
         left: 0;
         bottom: 0;
         z-index: 2;
-        @include screen('xs_mobile'){
+        @include screen('xs_mobile') {
             background-position: 70% top;
         }
     }
@@ -149,16 +149,40 @@ body {
         z-index: 3;
     }
     h1 {
-        color: #fff;
+        color: #333;
         text-align: center;
         margin: 120px auto 20px;
         padding: 0;
         width: 550px;
-        // height: 118px;
-         @include screen('xs_mobile') {
+        display: flex;
+        @include screen('xs_mobile') {
             width: 80%;
             height: auto;
             margin: 60px auto 20px;
+            display: block;
+        }
+        img {
+           
+           flex:0 0 55%;
+           @include screen('xs_mobile'){
+            width: 100%;
+             margin:0 auto 30px;
+           }
+        }
+        span {
+            flex:0 0 calc(100% - 55%);
+            font-size: 1.562em;
+            align-self: flex-end;
+            font-weight: 400;
+            letter-spacing: .05em;
+            em {
+                display: block;
+                font-size: 0.27em;
+                font-style: normal;
+                margin:10px 0 0 0;
+                letter-spacing:0;
+                font-weight: bolder;
+            }
         }
     }
 }
